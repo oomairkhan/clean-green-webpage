@@ -48,7 +48,7 @@
               Clean & Green Property Care
             </v-card-title>
             <v-card-text class="subtitle1">
-              Provide high-quality services for our valued clients
+              Sustainable Solutions for a Spotless Space
             </v-card-text>
             <v-btn variant="outlined" class="freeEstimate">Get a Free Estimate</v-btn>
           </v-col>
@@ -60,10 +60,10 @@
           <v-col class="column2" style="background-color: transparent">
             <v-img :src="defaultImage" class="image2" style=""></v-img>
             <v-card-text class="title2" style="">
-              Is your current cleaning company under performing & Unreliable?
+              Is your business in need of a cleaning upgrade?
             </v-card-text>
             <v-card-text class="subtitle2" style="color: white">
-              We offer 100k Solutions for all your commercial cleaning needs!..
+              Tailored Solutions for Sparkling Results!
             </v-card-text>
             <v-btn class="freeEstimate" style="width: fit-content; background-color: cadetblue">Get a Free Estimate</v-btn>
           </v-col>
