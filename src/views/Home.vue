@@ -30,35 +30,39 @@
           </v-col>
           <v-col class="extraComponent" ></v-col>
           <v-col class="navbar" style="color: white">
-            <v-card-text class="nav-bar-links-left">
+            <v-card-text v-on:click="navClicks('about-us')" class="nav-bar-links-left">
               ABOUT US
             </v-card-text>
-            <v-card-text class="nav-bar-links">
+            <v-card-text v-on:click="navClicks('services')" class="nav-bar-links">
               SERVICES WE OFFER
             </v-card-text>
-            <v-card-text class="nav-bar-links-right" style="text-align: right;" >
+            <v-card-text v-on:click="navClicks('contactUs')" class="nav-bar-links-right" style="text-align: right;" >
               GET AN ESTIMATE
             </v-card-text>
           </v-col>
           <v-col class="extraComponent"></v-col>
         </v-row>
         <v-row>
-          <v-col style="background-color: green; color: white; height: 60vh; display: grid; align-content: center; justify-content: center; text-align: center; justify-items: center">
-            <v-card-title class="title1">
-              Clean & Green Property Care
-            </v-card-title>
-            <v-card-text class="subtitle1">
-              Sustainable Solutions for a Spotless Space
-            </v-card-text>
-            <v-btn variant="outlined" class="freeEstimate">Get a Free Estimate</v-btn>
+          <!-- <v-col style="background-image: url('../assets/back1.jpg') !important; background-size: 100% 100%;background-position: center;color: white; height: 60vh; display: grid; align-content: center; justify-content: center; text-align: center; justify-items: center"> -->
+          <v-col style="background-color: transparent; color: white; height: 60vh;">
+            <v-card flat style="padding: 0; margin: 0; color: #008000; width: 100%; height: 100%; display: grid; align-content: center; justify-content: center; text-align: center; justify-items: center">
+              <v-img :src="back1" cover style="position: absolute; height: 100%; width: 100%; z-index: -1;"></v-img>
+              <v-card-title class="title1">
+                Clean & Green Property Care
+              </v-card-title>
+              <v-card-text class="subtitle1">
+                Sustainable Solutions for a Spotless Space
+              </v-card-text>
+              <v-btn variant="outlined" class="freeEstimate">Get a Free Estimate</v-btn>
+            </v-card>
           </v-col>
         </v-row>
-        <v-row class="imagerow" >
+        <v-row id="about-us" class="imagerow" >
           <v-col cols="5" style="display: grid; justify-content: center">
-            <v-img :src="defaultImage" class="image1" style=""></v-img>
+            <v-img :src="cleaningLady" class="image1" style=""></v-img>
           </v-col>
           <v-col class="column2" style="background-color: transparent">
-            <v-img :src="defaultImage" class="image2" style=""></v-img>
+            <v-img :src="logo100k" class="image2" style=""></v-img>
             <v-card-text class="title2" style="">
               Is your Business in Need of a Cleaning Upgrade?
             </v-card-text>
@@ -78,7 +82,7 @@
             </v-card-text>
           </v-col>
         </v-row> -->
-        <v-row>
+        <v-row id="services">
           <v-col class="servicesCol" style="background-color: white; height: 70vh; display: grid; align-content: center; justify-content: center; text-align: center; justify-items: center">
             <v-card-text style="padding:0; font-size: 18px; font-weight: bold; display: flex; align-items: center; color: #0486dd">
               <v-divider thickness="3" style="width: 100px; opacity: 1"></v-divider>
@@ -113,12 +117,67 @@
             </v-row>
           </v-col>
         </v-row>
-        <v-row>
-          <v-col style="background-color: #0486dd; color: white; height: 33vh; margin-bottom: 30px;display: grid; align-content: center; justify-content: center; text-align: center; justify-items: center">
-            <v-card-title style="padding:0; font-size: 30px; font-weight: bold;">
-              GET A FREE ESTIMATE
-            </v-card-title>
-            <v-btn variant="outlined" class="contactToday">Contact Today</v-btn>
+        <v-row style="margin-bottom: 30px;">
+          <v-col cols="6">
+            <v-card style="padding: 0; margin: 0; height: 75vh; width: 100%; color: black;">
+              <v-img :src="contactBack" cover style="position: absolute; height: 100%; width: 100%; z-index: -1;"></v-img>
+              <v-col style="display: grid; justify-items: left; height: 100%; align-content: space-around; padding: 0 5%">
+                <v-card-title style="padding:0; font-size: 30px; font-weight: bold;">
+                  GET A FREE ESTIMATE
+                </v-card-title>
+                <v-row style="display: grid" >
+                  <v-card-text style="font-size: 25px; text-align: left;">
+                    Call Us
+                  </v-card-text>
+                  <v-card-text style="font-size: 25px">
+                    7739511771
+                  </v-card-text>
+                </v-row>
+                <v-row style="display: grid;">
+                  <v-card-text style="text-align: left; font-size: 25px;">
+                    Find Us
+                  </v-card-text>
+                  <v-col>
+                    <v-card-text style="text-align: left; font-size: 25px;">
+                      123 Simpson Avenue, Elmo St.
+                    </v-card-text>
+                    <v-card-text style="text-align: left; font-size: 25px;">
+                      Illinois 60111
+                    </v-card-text>
+                  </v-col>
+                </v-row>
+              </v-col>
+            </v-card>
+          </v-col>
+          <v-col cols="6" style="background-color: #0486dd; color: white; align-content: center; justify-content: center; text-align: center; justify-items: center">
+            <div id="contactUs" class="contactForm" style="height: 100%;">
+              <div class="contactUsCard2" style="height: 100%">
+                  <!-- <form method="POST"  action="{% url 'contact_view' %}" class="form-card" style="height: 100%; align-content: center;"> -->
+                  <form class="form-card" style="height: 100%; align-content: center;">
+                  <!-- <form method="POST" class="row form" style="width: 100%; display: flex; justify-content: center"> -->
+                      <!-- {% csrf_token %} -->
+                      <h4 style="color: white; text-align: center; font-size: 30px; ">
+                          Contact Us
+                      </h4>
+                      <div class="row" style="margin: 0;">
+                          <div class="mb-3 col-12" style="padding: 0">
+                              <input type="text" name="name" class="form-control forms" id="name" placeholder="Name" aria-describedby="nameHelp">
+                            </div>
+                            <div class="mb-3 col-12" style="padding: 0">
+                              <input type="email" name="email" class="form-control forms"  placeholder="E-mail address" id="emailaddr">
+                            </div>
+                            <div class="mb-3 col-12" style="padding: 0;">
+                              <textarea class="form-control forms" id="message" placeholder="Message" rows="4" name="message" style="min-height: 174px; max-height: 174px; border-radius: 0"></textarea>
+                            </div>
+                      </div>
+                      <div>
+                          <button type="submit" class="btn btn-primary msgSendBtn">
+                              Send
+                          </button>
+                      </div>
+                  </form>
+              </div>
+          </div>
           </v-col>
         </v-row>
       </v-card>
@@ -132,6 +191,9 @@ import logo100k from "@/assets/logo100k.png"
 import service1 from "@/assets/janitor.jpg"
 import service2 from "@/assets/green-cleaning.jpg"
 import service3 from "@/assets/post-construction-cleaning.jpg"
+import back1 from "@/assets/back1.jpg"
+import contactBack from "@/assets/contactBack.jpg"
+import cleaningLady from "@/assets/cleaningLady.jpg"
 
 export default{
   data() {
@@ -141,11 +203,15 @@ export default{
       service1: service1,
       service2: service2,
       service3: service3,
+      back1: back1,
+      contactBack: contactBack,
+      cleaningLady: cleaningLady,
     }
   },
   methods:{
-    navClicks(){
-      getElementById("box"); element. scrollIntoView();
+    navClicks(id){
+      var element = document.getElementById(id); 
+      element.scrollIntoView();
     }
   }
 }
@@ -243,6 +309,18 @@ export default{
 }
 .logoMain{
   height: 95px; margin: 5px 0
+}
+.form-control{
+  height: 45px;
+  width: 50%;
+  margin: 10px 0
+}
+.msgSendBtn{
+  width: 50%;
+  max-width: 400px;
+  height: 35px;
+  margin-top: 10px;
+  cursor: pointer
 }
 @media only screen and (max-width: 500px){
   .app-bar{
