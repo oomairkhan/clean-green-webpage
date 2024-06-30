@@ -117,8 +117,8 @@
             </v-row>
           </v-col>
         </v-row>
-        <v-row style="margin-bottom: 30px;">
-          <v-col cols="6">
+        <v-row class="footer" style="margin-bottom: 30px;">
+          <v-col class="footerCols">
             <v-card style="padding: 0; margin: 0; height: 75vh; width: 100%; color: black;">
               <v-img :src="contactBack" cover style="position: absolute; height: 100%; width: 100%; z-index: -1;"></v-img>
               <v-col style="display: grid; justify-items: left; height: 100%; align-content: space-around; padding: 0 5%">
@@ -149,7 +149,7 @@
               </v-col>
             </v-card>
           </v-col>
-          <v-col cols="6" style="background-color: #0486dd; color: white; align-content: center; justify-content: center; text-align: center; justify-items: center">
+          <v-col  class="footerCols" style="background-color: #0486dd; color: white; align-content: center; justify-content: center; text-align: center; justify-items: center">
             <div id="contactUs" class="contactForm" style="height: 100%;">
               <div class="contactUsCard2" style="height: 100%">
                   <!-- <form method="POST"  action="{% url 'contact_view' %}" class="form-card" style="height: 100%; align-content: center;"> -->
@@ -429,6 +429,12 @@ export default{
   }
   .servicesCard{
     margin: 0 0 15px 0 !important
+  }
+  .footer{
+    display: grid
+  }
+  .contactForm{
+    padding: 20px 0
   }
 }
 </style>
