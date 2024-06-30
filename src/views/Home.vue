@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar class="appBar" flat>
+    <!-- <v-app-bar class="appBar" flat>
       <v-row class="app-bar">
         <v-col style="display: flex">
           <v-card-text>
@@ -20,7 +20,7 @@
           </v-card-text>
         </v-col>
       </v-row>
-    </v-app-bar>
+    </v-app-bar> -->
     
     <v-main class="main" style="background-color: black;">
       <v-card style="background-color: transparent">
@@ -30,20 +30,14 @@
           </v-col>
           <v-col class="extraComponent" ></v-col>
           <v-col class="navbar" style="color: white">
-            <v-card-text class="nav-bar-links-left" style="">
-              HOME
-            </v-card-text>
-            <v-card-text class="nav-bar-links">
+            <v-card-text class="nav-bar-links-left">
               ABOUT US
             </v-card-text>
             <v-card-text class="nav-bar-links">
               SERVICES WE OFFER
             </v-card-text>
-            <v-card-text class="nav-bar-links">
-              BENEFITS
-            </v-card-text>
             <v-card-text class="nav-bar-links-right" style="text-align: right;" >
-              WHO WE SERVE
+              GET AN ESTIMATE
             </v-card-text>
           </v-col>
           <v-col class="extraComponent"></v-col>
@@ -74,7 +68,7 @@
             <v-btn class="freeEstimate" style="width: fit-content; background-color: cadetblue">Get a Free Estimate</v-btn>
           </v-col>
         </v-row>
-        <v-row class="limitedRow" style="">
+        <!-- <v-row class="limitedRow" style="">
           <v-col style="background-color: grey; color: white; height: 40vh; display: grid; align-content: center; justify-content: center; text-align: center; justify-items: center">
             <v-card-title class="limitedTitle" style="">
               Limited Time Offer:
@@ -83,9 +77,9 @@
               50% OFF for the first month only available until the end of month.
             </v-card-text>
           </v-col>
-        </v-row>
+        </v-row> -->
         <v-row>
-          <v-col class="servicesCol" style="background-color: transparent; height: 70vh; display: grid; align-content: center; justify-content: center; text-align: center; justify-items: center">
+          <v-col class="servicesCol" style="background-color: white; height: 70vh; display: grid; align-content: center; justify-content: center; text-align: center; justify-items: center">
             <v-card-text style="padding:0; font-size: 18px; font-weight: bold; display: flex; align-items: center; color: #0486dd">
               <v-divider thickness="3" style="width: 100px; opacity: 1"></v-divider>
               <span style="margin: 0 10px">SERVICES</span>
@@ -194,7 +188,6 @@ export default{
   cursor: pointer
 }
 .v-main{
-  padding-top: 32px 
 }
 .v-row{
   margin: 0;
