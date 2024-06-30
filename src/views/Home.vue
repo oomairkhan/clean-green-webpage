@@ -14,7 +14,7 @@
         </v-col>
         <v-col style="display: none;"></v-col>
         <v-col>
-          <v-card-text>
+          <v-card-text style="text-align: center;">
             <v-icon>$vuetify</v-icon>
             3133 W, Frye rd. Suite #101 Chandler, AZ 85226
           </v-card-text>
