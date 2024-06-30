@@ -60,7 +60,7 @@
           <v-col class="column2" style="background-color: transparent">
             <v-img :src="defaultImage" class="image2" style=""></v-img>
             <v-card-text class="title2" style="">
-              Is your business in need of a cleaning upgrade?
+              Is your Business in Need of a Cleaning Upgrade?
             </v-card-text>
             <v-card-text class="subtitle2" style="color: white">
               Tailored Solutions for Sparkling Results!
